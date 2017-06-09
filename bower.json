@@ -1,0 +1,20 @@
+{
+  "name": "test_task_from_progroupconsult",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Alexandr Vlasenko <olexandr.vlasenko@gmail.com> (http://a-vlasenko.zzz.com.ua/)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/oxyyyyy/test_task_from_ProGroupConsult",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
