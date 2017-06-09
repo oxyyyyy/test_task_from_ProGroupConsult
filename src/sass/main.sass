@@ -1,4 +1,70 @@
 // Copyright (c) 2017 Copyright Holder All Rights Reserved.
 // Author: Alexandr Vlasenko
 
+// TODO: Replace font-awesome icons to original
+
 @import "_vars.sass"
+
+body
+  font-family: RobotoCondensed-Bold
+  background-image: url("../img/body_bg.png")
+  background-size: cover
+
+
+.header_top
+  font-size: 14px
+  color: #fff
+  background-color: $header_top_bg_color
+  text-align: center
+  padding: 7px 0
+  p
+    margin: 0
+    span
+      text-transform: uppercase
+      color: $accent_color
+
+header
+  margin: 15px 0
+
+.header_skew_logo
+  display: inline-block
+  width: 25%
+  height: 50px
+  background-image: $logo_gradient
+  padding: 5px 15px 9px 0
+  transform: skewX(-30deg)
+.header_logo
+  transform: skewX(30deg)
+
+.header_skew_title
+  display: inline-block
+  width: 75%
+  height: 50px
+  text-align: right
+  background-image: $title_gradient
+  float: right
+  transform: skewX(-30deg)
+h1
+  font-family: RobotoCondensed-BoldItalic
+  font-size: 34px
+  text-transform: uppercase
+  color: $title_color
+  transform: skewX(30deg)
+  margin: 0
+  padding: 6px 20px 6px 0
+  span
+    position: absolute
+    top: 30px
+    right: 0
+    z-index: 20
+    font-size: 24px
+    color: $accent_color
+    padding: 11px 58px 10px 0
+    transform: rotate(-5deg)
+  &::after
+    content: url("../img/ink.png")
+    position: absolute
+    top: 30px
+    right: 0
+    width: 209px
+    height: 45px
