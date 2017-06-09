@@ -10,7 +10,7 @@ var gulp = require('gulp'),
   del = require('del');
 
 // NOTE: Musthave!
-// npm i gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-cssnano gulp-rename gulp-concat-css del --save-dev
+// npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-cssnano gulp-rename gulp-concat-css gulp-imagemin del --save-dev
 // npm i jquery bootstrap@4.0.0-alpha.6 tether wow.js waypoints nprogress --save
 
 // Tasks! ----------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ gulp.task('scripts', function() {
 
 gulp.task('concatCssTaskLibs', function() {
   return gulp.src([
-      'bower_components\bootstrap\dist\css\bootstrap.css'
+      'bower_components/bootstrap/dist/css/bootstrap.css'
     ])
     .pipe(concatCss('bundle.libs.css'))
     .pipe(gulp.dest('src/css'));
