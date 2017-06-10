@@ -5,12 +5,17 @@
 
 @import "_vars.sass"
 
+// Body styles
 body
   font-family: RobotoCondensed-Bold
   background-image: url("../img/body_bg.png")
-  background-size: cover
+  overflow-x: hidden
+ul
+  margin: 0
+  padding: 0
+  list-style-type: none
 
-
+// Header styles
 .header_top
   font-size: 14px
   color: #fff
@@ -23,14 +28,11 @@ body
       text-transform: uppercase
       color: $accent_color
 
-header
-  margin: 15px 0
-
 .header_skew_logo
   display: inline-block
-  width: 25%
   height: 50px
   background-image: $logo_gradient
+  margin-top: 15px
   padding: 5px 15px 9px 0
   transform: skewX(-30deg)
 .header_logo
@@ -38,12 +40,20 @@ header
 
 .header_skew_title
   display: inline-block
-  width: 75%
+  width: 100%
   height: 50px
   text-align: right
   background-image: $title_gradient
   float: right
+  margin-top: 15px
   transform: skewX(-30deg)
+  p
+    display: inline-block
+    font-family: RobotoCondensed-BoldItalic
+    color: $header_p_color
+    float: left
+    margin: 13px
+    transform: skewX(30deg)
 h1
   font-family: RobotoCondensed-BoldItalic
   font-size: 34px
@@ -55,7 +65,7 @@ h1
   span
     position: absolute
     top: 30px
-    right: 0
+    right: -35px
     z-index: 20
     font-size: 24px
     color: $accent_color
@@ -65,6 +75,120 @@ h1
     content: url("../img/ink.png")
     position: absolute
     top: 30px
-    right: 0
+    right: -35px
     width: 209px
     height: 45px
+  &::before
+    content: 'Nature’s miraculous weight loss secret!'
+    position: absolute
+    bottom: -20px
+    font-size: 14px
+    color: $header_p_color
+    text-transform: none
+
+// Prices section styles
+// Price card
+.price_card
+  font-family: RobotoCondensed-Regular
+  text-align: center
+  background-color: #fff
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07)
+  border-radius: 5px
+  margin: 50px 0
+  padding: 20px 0 5px 0
+// Card header
+.price_card_header
+  background: $price_card_header_gradient
+  text-align: left
+.top_text_title, .top_text_subtitle
+  color: $top_text_color
+  margin: 0 0 0 20px
+.bottles_img
+  margin-top: 20px
+  margin-left: 20px
+  margin-bottom: -15px
+.lady_img
+  position: absolute
+  top: 26px
+  right: 6px
+// Card body
+.price_card_body
+  padding: 0 7px
+.top_text_title
+  font-family: RobotoCondensed-Bold
+  font-size: 20px
+  text-transform: capitalize
+.price_card_title
+  text-transform: capitalize
+  color: $price_card_title_color
+  margin-top: 20px
+.price_card_desc
+  color: $price_card_desc_color
+.bullets_ul
+  display: inline-block
+  font-family: RobotoCondensed-Bold
+  font-size: 18px
+  text-align: left
+  margin: auto
+span.weight
+  font-family: RobotoCondensed-BoldItalic
+  color: $top_text_color
+  text-transform: uppercase
+span.free_shipping
+  font-family: RobotoCondensed-BoldItalic
+  color: $price_card_free_shipping
+  text-transform: uppercase
+.bullet
+  span
+  &::before
+    content: url("../img/li_disc.png")
+    position: relative
+    top: 5px
+    left: -3px
+.price_card_price
+  font-family: RobotoCondensed-Bold
+  color: $top_text_color
+  margin-top: 30px
+  padding: 10px
+  border: 2px solid transparent
+  border-image: $price_card_border_gragient
+  border-image-slice: 1
+  border-bottom: none
+  border-radius: 5px
+  p
+    margin: 0
+  .old_price
+    span
+      // TODO: Make through-line
+      &::after
+        // content: ''
+        // display: block
+        // background-color: red
+        // position: relative
+        // height: 2px
+        // width: 58px
+        // top: -14px
+        // left: 185px
+        // transform: rotate(10deg)
+  .current_price, .per_unit
+    display: inline-block
+  .current_price
+    font-size: 30px
+    margin-right: 10px
+  .per_unit
+    text-align: left
+    line-height: 16px
+  .price_card_status
+    font-family: RobotoCondensed-BoldItalic
+    text-transform: uppercase
+    text-align: right
+    margin-top: 30px
+    p
+      display: inline-block
+      margin-right: 10px
+.circle
+  display: inline-block
+  width: 22px
+  height: 22px
+  border-radius: 50%
+  box-shadow: $circle_shadow

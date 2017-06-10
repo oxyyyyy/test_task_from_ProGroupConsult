@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: RobotoCondensed-Regular;
   src: url(../fonts/RobotoCondensed-Regular.ttf); }
@@ -25,7 +26,12 @@
 body {
   font-family: RobotoCondensed-Bold;
   background-image: url("../img/body_bg.png");
-  background-size: cover; }
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
 
 .header_top {
   font-size: 14px;
@@ -39,14 +45,11 @@ body {
       text-transform: uppercase;
       color: #fde950; }
 
-header {
-  margin: 15px 0; }
-
 .header_skew_logo {
   display: inline-block;
-  width: 25%;
   height: 50px;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(55, 88, 85, 0.8) 67%, #375855 84%);
+  margin-top: 15px;
   padding: 5px 15px 9px 0;
   transform: skewX(-30deg); }
 
@@ -55,12 +58,20 @@ header {
 
 .header_skew_title {
   display: inline-block;
-  width: 75%;
+  width: 100%;
   height: 50px;
   text-align: right;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.54118) 0%, rgba(255, 255, 255, 0.55) 1%, #fee84d 100%);
   float: right;
+  margin-top: 15px;
   transform: skewX(-30deg); }
+  .header_skew_title p {
+    display: inline-block;
+    font-family: RobotoCondensed-BoldItalic;
+    color: #375855;
+    float: left;
+    margin: 13px;
+    transform: skewX(30deg); }
 
 h1 {
   font-family: RobotoCondensed-BoldItalic;
@@ -73,7 +84,7 @@ h1 {
   h1 span {
     position: absolute;
     top: 30px;
-    right: 0;
+    right: -35px;
     z-index: 20;
     font-size: 24px;
     color: #fde950;
@@ -83,6 +94,115 @@ h1 {
     content: url("../img/ink.png");
     position: absolute;
     top: 30px;
-    right: 0;
+    right: -35px;
     width: 209px;
     height: 45px; }
+  h1::before {
+    content: 'Nature’s miraculous weight loss secret!';
+    position: absolute;
+    bottom: -20px;
+    font-size: 14px;
+    color: #375855;
+    text-transform: none; }
+
+.price_card {
+  font-family: RobotoCondensed-Regular;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  margin: 50px 0;
+  padding: 20px 0 5px 0; }
+
+.price_card_header {
+  background: linear-gradient(20deg, rgba(52, 145, 159, 0.25) 0%, rgba(74, 157, 170, 0.25) 11%, rgba(125, 185, 194, 0) 36%, rgba(255, 255, 255, 0) 100%);
+  text-align: left; }
+
+.top_text_title, .top_text_subtitle {
+  color: #34919f;
+  margin: 0 0 0 20px; }
+
+.bottles_img {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: -15px; }
+
+.lady_img {
+  position: absolute;
+  top: 26px;
+  right: 6px; }
+
+.price_card_body {
+  padding: 0 7px; }
+
+.top_text_title {
+  font-family: RobotoCondensed-Bold;
+  font-size: 20px;
+  text-transform: capitalize; }
+
+.price_card_title {
+  text-transform: capitalize;
+  color: #b1a78e;
+  margin-top: 20px; }
+
+.price_card_desc {
+  color: #757879; }
+
+.bullets_ul {
+  display: inline-block;
+  font-family: RobotoCondensed-Bold;
+  font-size: 18px;
+  text-align: left;
+  margin: auto; }
+
+span.weight {
+  font-family: RobotoCondensed-BoldItalic;
+  color: #34919f;
+  text-transform: uppercase; }
+
+span.free_shipping {
+  font-family: RobotoCondensed-BoldItalic;
+  color: #c82044;
+  text-transform: uppercase; }
+
+.bullet::before {
+  content: url("../img/li_disc.png");
+  position: relative;
+  top: 5px;
+  left: -3px; }
+
+.price_card_price {
+  font-family: RobotoCondensed-Bold;
+  color: #34919f;
+  margin-top: 30px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, white 0%, #34919f 0%, white 100%);
+  border-image-slice: 1;
+  border-bottom: none;
+  border-radius: 5px; }
+  .price_card_price p {
+    margin: 0; }
+  .price_card_price .current_price, .price_card_price .per_unit {
+    display: inline-block; }
+  .price_card_price .current_price {
+    font-size: 30px;
+    margin-right: 10px; }
+  .price_card_price .per_unit {
+    text-align: left;
+    line-height: 16px; }
+  .price_card_price .price_card_status {
+    font-family: RobotoCondensed-BoldItalic;
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 30px; }
+    .price_card_price .price_card_status p {
+      display: inline-block;
+      margin-right: 10px; }
+
+.circle {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-shadow: inset 0px 7px 25px -6px rgba(0, 0, 0, 0.3); }
