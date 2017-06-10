@@ -91,15 +91,16 @@ h1
 .price_card
   font-family: RobotoCondensed-Regular
   text-align: center
-  background-color: #fff
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07)
   border-radius: 5px
   margin: 50px 0
-  padding: 20px 0 5px 0
+  padding-top: 20px
+  transition: $main_trans_prop
 // Card header
 .price_card_header
   background: $price_card_header_gradient
   text-align: left
+  background-color: #fff
 .top_text_title, .top_text_subtitle
   color: $top_text_color
   margin: 0 0 0 20px
@@ -114,6 +115,8 @@ h1
 // Card body
 .price_card_body
   padding: 0 7px
+  margin-top: -20px
+  background-color: #fff
 .top_text_title
   font-family: RobotoCondensed-Bold
   font-size: 20px
@@ -122,6 +125,7 @@ h1
   text-transform: capitalize
   color: $price_card_title_color
   margin-top: 20px
+  padding-top: 20px
 .price_card_desc
   color: $price_card_desc_color
 .bullets_ul
@@ -192,3 +196,38 @@ span.free_shipping
   height: 22px
   border-radius: 50%
   box-shadow: $circle_shadow
+// Card footer
+.price_card_footer
+  color: $muted_text
+  background-color: transparent
+  padding: 20px
+  text-align: left
+  border: 2px solid transparent
+  border-image: $price_card_border_gragient_reverse
+  border-image-slice: 1
+  border-top: none
+.price_card_effectiveness
+  font-family: RobotoCondensed-BoldItalic
+  text-transform: uppercase
+  margin-top: 10px
+  margin-bottom: 0
+.price_card_mark
+  display: inline-block
+  font-family: RobotoCondensed-BoldItalic
+  font-size: 24px
+  float: right
+  background-color: $accent_color
+  border-radius: 5px
+  padding: 0 10px
+  position: relative
+  top: -20px
+.price_card_verified
+  font-family: RobotoCondensed-RegularItalic
+  text-align: right
+  margin: 0
+  margin-top: 10px
+  position: relative
+  right: -50px
+  img
+    position: relative
+    top: 3px
