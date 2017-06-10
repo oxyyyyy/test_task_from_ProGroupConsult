@@ -11,7 +11,9 @@
 // 3. Желательно сделать адаптив – мобайл -таблет
 
 // Price card scripts
-$(".price_card").hover(function() {
-  $(this).css(["transform","scale(1.5)"]);
+$(".price_card").click(function() {
+  $(this).css("transform","scale(1.05)");
+  $(".lady_img").css("top","-24px");
+  $(".lady_img").css("right","-9px");
   console.log("hovered");
 });
