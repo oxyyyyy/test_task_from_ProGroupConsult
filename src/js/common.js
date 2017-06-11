@@ -10,10 +10,9 @@
 // 2. При попытке выйти со страницы должен появляться поп-ап ( 2 бутылки в подарок).
 // 3. Желательно сделать адаптив – мобайл -таблет
 
-// Price card scripts
 $(".price_card").click(function() {
-  $(this).css("transform","scale(1.05)");
-  $(".lady_img").css("top","-24px");
-  $(".lady_img").css("right","-9px");
-  console.log("hovered");
+  $(".price_card").removeClass("active_price_card");
+  $(".price_card").find(".price_card_status_p").html("select package");
+  $(this).addClass("active_price_card");
+  $(this).find(".price_card_status_p").html("selected package");
 });

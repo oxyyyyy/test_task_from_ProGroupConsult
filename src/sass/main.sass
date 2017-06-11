@@ -2,6 +2,7 @@
 // Author: Alexandr Vlasenko
 
 // TODO: Replace font-awesome icons to original
+// TODO: Fix the bug with ladys' images
 
 @import "_vars.sass"
 
@@ -93,9 +94,14 @@ h1
   text-align: center
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.07)
   border-radius: 5px
-  margin: 50px 0
-  padding-top: 20px
+  margin-top: 50px
+  margin-bottom: 20px
+  padding: 5px
   transition: $main_trans_prop
+.price_card_body_border
+  border: 2px solid $header_p_color
+  border-radius: 5px
+  padding-top: 20px
 // Card header
 .price_card_header
   background: $price_card_header_gradient
@@ -110,8 +116,15 @@ h1
   margin-bottom: -15px
 .lady_img
   position: absolute
-  top: 26px
+#lady_img_1
+  top: 33px
   right: 6px
+#lady_img_2
+  top: 41px
+  right: 6px
+#lady_img_3
+  top: 45px
+  right: 15px
 // Card body
 .price_card_body
   padding: 0 7px
@@ -126,8 +139,10 @@ h1
   color: $price_card_title_color
   margin-top: 20px
   padding-top: 20px
+  transition: $main_trans_prop
 .price_card_desc
   color: $price_card_desc_color
+  font-size: 15px
 .bullets_ul
   display: inline-block
   font-family: RobotoCondensed-Bold
@@ -158,10 +173,11 @@ span.free_shipping
   border-image: $price_card_border_gragient
   border-image-slice: 1
   border-bottom: none
-  border-radius: 5px
+  transition: $main_trans_prop
   p
     margin: 0
   .old_price
+    transition: $main_trans_prop
     span
       // TODO: Make through-line
       &::after
@@ -179,9 +195,12 @@ span.free_shipping
   .current_price
     font-size: 30px
     margin-right: 10px
+    margin-left: 30px
   .per_unit
     text-align: left
     line-height: 16px
+    padding-left: 4px
+    width: 20%
   .price_card_status
     font-family: RobotoCondensed-BoldItalic
     text-transform: uppercase
@@ -196,6 +215,13 @@ span.free_shipping
   height: 22px
   border-radius: 50%
   box-shadow: $circle_shadow
+  &::after
+    content: url("../img/checked.png")
+    position: absolute
+    right: 18px
+    bottom: 151px
+    opacity: 0
+    transition: $main_trans_prop
 // Card footer
 .price_card_footer
   color: $muted_text
@@ -231,3 +257,31 @@ span.free_shipping
   img
     position: relative
     top: 3px
+// ! Active status of price card
+.active_price_card
+  transform: scale(1.05)
+  .price_card_title
+    color: $header_p_color
+  #lady_img_1
+    top: -17px
+    right: -9px
+  #lady_img_2
+    top: -9px
+    right: -9px
+  #lady_img_3
+    top: -5px
+    right: 0px
+  .price_card_price
+    background-color: $header_p_color
+    color: #fff
+    border: 2px solid $header_p_color
+  .old_price
+    color: $accent_color
+  .per_unit
+    background: $price_card_per_unit_gragient
+    color: $header_p_color
+  .circle
+    background-color: #fff
+    border: 2px solid $header_p_color
+    &::after
+      opacity: 1
