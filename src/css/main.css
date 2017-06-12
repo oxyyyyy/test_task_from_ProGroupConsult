@@ -26,6 +26,7 @@
 body {
   font-family: RobotoCondensed-Bold;
   background-image: url("../img/body_bg.png");
+  background-size: cover;
   overflow-x: hidden; }
 
 ul {
@@ -81,6 +82,14 @@ h1 {
   transform: skewX(30deg);
   margin: 0;
   padding: 6px 20px 6px 0; }
+  @media (max-width: 425px) {
+    h1 {
+      font-size: 30px;
+      padding: 8px 20px 8px 0; } }
+  @media (max-width: 380px) {
+    h1 {
+      font-size: 24px;
+      padding: 10px 20px 10px 0; } }
   h1 span {
     position: absolute;
     top: 30px;
@@ -104,6 +113,9 @@ h1 {
     font-size: 14px;
     color: #375855;
     text-transform: none; }
+    @media (max-width: 425px) {
+      h1::before {
+        display: none; } }
 
 .price_card {
   font-family: RobotoCondensed-Regular;
@@ -112,18 +124,28 @@ h1 {
   border-radius: 5px;
   margin-top: 50px;
   margin-bottom: 20px;
-  padding: 5px;
+  padding: 3px;
+  cursor: pointer;
   transition: 1s; }
 
+.most_popular_label {
+  position: absolute; }
+  .most_popular_label::before {
+    content: url("../img/most_popular.png");
+    position: absolute;
+    right: -116px;
+    top: -18px; }
+
 .price_card_body_border {
-  border: 2px solid #375855;
+  border: 2px solid transparent;
   border-radius: 5px;
-  padding-top: 20px; }
+  transition: 1s; }
 
 .price_card_header {
   background: linear-gradient(20deg, rgba(52, 145, 159, 0.25) 0%, rgba(74, 157, 170, 0.25) 11%, rgba(125, 185, 194, 0) 36%, rgba(255, 255, 255, 0) 100%);
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-top: 20px; }
 
 .top_text_title, .top_text_subtitle {
   color: #34919f;
@@ -134,25 +156,33 @@ h1 {
   margin-left: 20px;
   margin-bottom: -15px; }
 
-.lady_img {
-  position: absolute; }
+.price_card_lady_pseudo {
+  position: relative; }
 
-#lady_img_1 {
-  top: 33px;
-  right: 6px; }
+#price_card_lady_pseudo_1::before {
+  content: url("../img/price_card_lady_1.png");
+  position: absolute;
+  top: -205px;
+  right: -16px; }
 
-#lady_img_2 {
-  top: 41px;
-  right: 6px; }
+#price_card_lady_pseudo_2::before {
+  content: url("../img/price_card_lady_2.png");
+  position: absolute;
+  top: -197px;
+  right: -16px; }
 
-#lady_img_3 {
-  top: 45px;
-  right: 15px; }
+#price_card_lady_pseudo_3::before {
+  content: url("../img/price_card_lady_3.png");
+  position: absolute;
+  top: -193px;
+  right: -3px; }
 
 .price_card_body {
   padding: 0 7px;
+  padding-bottom: 5px;
   margin-top: -20px;
-  background-color: #fff; }
+  background-color: #fff;
+  transition: 1s; }
 
 .top_text_title {
   font-family: RobotoCondensed-Bold;
@@ -187,11 +217,13 @@ span.free_shipping {
   color: #c82044;
   text-transform: uppercase; }
 
-.bullet::before {
-  content: url("../img/li_disc.png");
-  position: relative;
-  top: 5px;
-  left: -3px; }
+.bullet {
+  transition: 1s; }
+  .bullet::before {
+    content: url("../img/li_disc.png");
+    position: relative;
+    top: 5px;
+    left: -3px; }
 
 .price_card_price {
   font-family: RobotoCondensed-Bold;
@@ -236,8 +268,8 @@ span.free_shipping {
   .circle::after {
     content: url("../img/checked.png");
     position: absolute;
-    right: 18px;
-    bottom: 151px;
+    right: 16px;
+    bottom: 153px;
     opacity: 0;
     transition: 1s; }
 
@@ -283,6 +315,10 @@ span.free_shipping {
   transform: scale(1.05); }
   .active_price_card .price_card_title {
     color: #375855; }
+  .active_price_card .price_card_body {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(246, 41, 12, 0) 0%, rgba(255, 255, 255, 0.28) 28%, #fde950 100%); }
+  .active_price_card .price_card_body_border {
+    border: 2px solid #375855; }
   .active_price_card #lady_img_1 {
     top: -17px;
     right: -9px; }
@@ -306,3 +342,30 @@ span.free_shipping {
     border: 2px solid #375855; }
     .active_price_card .circle::after {
       opacity: 1; }
+  .active_price_card .bullet::before {
+    content: url("../img/li_disc_active.png"); }
+
+.modal-dialog {
+  max-width: 700px; }
+
+.modal-body {
+  background-color: #375855;
+  padding: 10px;
+  border-radius: 3px; }
+  .modal-body .header_skew_logo {
+    margin-left: 15px; }
+  .modal-body .header_skew_title {
+    text-align: left;
+    padding-left: 30px; }
+    .modal-body .header_skew_title h1::before {
+      content: none; }
+
+.modal_fruits_and_bottles {
+  margin-top: 30px; }
+
+.modal_bg_img {
+  background-image: url("../img/body_bg.png");
+  background-position: -465px;
+  border-radius: 7px 7px 0 0; }
+  .modal_bg_img .col-9 {
+    padding: 0; }

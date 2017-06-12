@@ -40,7 +40,7 @@
         </div>
         <div class="col-lg-9">
           <div class="header_skew_title">
-            <p>Garcinia cambogia extract capsules</p>
+            <p class="hidden-sm-down">Garcinia cambogia extract capsules</p>
             <h1>burn fat quicker & more <span>efficiently!</span></h1>
           </div>
         </div>
@@ -51,14 +51,14 @@
     <section class="prices">
       <div class="row">
 
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
           <div id="price_card_1" class="price_card">
             <div class="price_card_body_border">
               <div class="price_card_header">
                 <p class="top_text_title">get started</p>
                 <p class="top_text_subtitle">with your Introductory bottle</p>
                 <img src="img/price_card_bottles_1.png" class="bottles_img" alt="">
-                <img src="img/price_card_lady_1.png" id="lady_img_1" class="lady_img" alt="">
+                <div id="price_card_lady_pseudo_1" class="price_card_lady_pseudo"></div>
               </div>
               <div class="price_card_body">
                 <h2 class="price_card_title"><b>starter</b> package</h2>
@@ -90,14 +90,15 @@
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
           <div id="price_card_2" class="price_card active_price_card">
+            <div class="most_popular_label"></div>
             <div class="price_card_body_border">
               <div class="price_card_header">
                 <p class="top_text_title">maximum slimming</p>
                 <p class="top_text_subtitle">Unleash your power within</p>
                 <img src="img/price_card_bottles_2.png" class="bottles_img" alt="">
-                <img src="img/price_card_lady_2.png" id="lady_img_2" class="lady_img" alt="">
+                <div id="price_card_lady_pseudo_2" class="price_card_lady_pseudo"></div>
               </div>
               <div class="price_card_body">
                 <h2 class="price_card_title"><b>pro result</b> package</h2>
@@ -129,14 +130,14 @@
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
           <div id="price_card_3" class="price_card">
             <div class="price_card_body_border">
               <div class="price_card_header">
                 <p class="top_text_title">great value</p>
                 <p class="top_text_subtitle">Kickstart your weight loss today</p>
                 <img src="img/price_card_bottles_3.png" class="bottles_img" alt="">
-                <img src="img/price_card_lady_3.png" id="lady_img_3" class="lady_img" alt="">
+                <div id="price_card_lady_pseudo_3" class="price_card_lady_pseudo"></div>
               </div>
               <div class="price_card_body">
                 <h2 class="price_card_title"><b>slim down</b> package</h2>
@@ -171,6 +172,35 @@
       </div>
     </section>
 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Launch demo modal
+    </button>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal_bg_img">
+            <div class="row">
+              <div class="col-9">
+                <div class="header_skew_logo">
+                  <a href="#" class="d-flex justify-content-end align-items-center header_logo_a"><img src="img/logo.png" class="header_logo" alt=""></a>
+                </div>
+                <div class="header_skew_title">
+                  <h1>burn fat quicker & more <span>efficiently!</span></h1>
+                </div>
+                <img src="img/modal_fruits_and_bottles.png" class="modal_fruits_and_bottles" alt="">
+              </div>
+              <img src="img/modal_lady.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Concatinated and minified scripts -->
