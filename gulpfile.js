@@ -69,13 +69,13 @@ gulp.task('minCssLibs', ['concatCssTaskLibs'], function() {
 });
 
 gulp.task('clean', function() {
-  return del.sync('assets/dist/**/*');
+  return del.sync('dist/**/*');
 });
 
 gulp.task('imgOpti', function() {
   return gulp.src('src/img/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('assets/dist/img'))
+    .pipe(gulp.dest('dist/img'))
 });
 // -----------------------------------------------------------------------------------------------------------
 
@@ -94,19 +94,19 @@ gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs'], function() {
       'src/css/main.min.css',
       'src/css/bundle.libs.min.css'
     ])
-    .pipe(gulp.dest('assets/dist/css'));
+    .pipe(gulp.dest('dist/css'));
 
   var buildJs = gulp.src([
       'src/js/libs.min.js',
       'src/js/common.js',
       'src/js/particlesjs-config.json'
     ])
-    .pipe(gulp.dest('assets/dist/js'));
+    .pipe(gulp.dest('dist/js'));
 
   var buildFonts = gulp.src([
       'src/fonts/**/*.*'
     ])
-    .pipe(gulp.dest('assets/dist/fonts'));
+    .pipe(gulp.dest('dist/fonts'));
 
   var buildImg = gulp.src('src/img/**/*')
     .pipe(imagemin([
@@ -125,13 +125,13 @@ gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs'], function() {
         }]
       })
     ]))
-    .pipe(gulp.dest('assets/dist/img'));
+    .pipe(gulp.dest('dist/img'));
 
   var buildHtmlPhp = gulp.src([
       'src/*.html',
       'src/*.php'
     ])
-    .pipe(gulp.dest('assets/dist/'));
+    .pipe(gulp.dest('dist/'));
 
 });
 // -----------------------------------------------------------------------------------------------------------
