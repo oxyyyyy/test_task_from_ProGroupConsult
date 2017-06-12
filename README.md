@@ -10,7 +10,6 @@
 * Bootstrap 4
 * JS
 * jQuery
-* Ajax
 * Git
 * npm
 * Bower
