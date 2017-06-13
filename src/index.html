@@ -8,24 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Alexandr Vlasenko">
 
-  <!-- Favicon -->
-  <!-- ? -->
-
   <!-- Title -->
   <title>Test task from Pro Group Consult</title>
 
   <!-- Concatinated and minified stylesheets -->
   <link rel="stylesheet" href="css/bundle.libs.min.css">
   <link rel="stylesheet" href="css/main.min.css">
-  <!-- Font awesome -->
-  <script src="https://use.fontawesome.com/250d670485.js"></script>
 
 </head>
 
 <body>
 
   <div class="header_top">
-    <p><span>special discount activated:</span> Price savings of over 40% + <span><i class="fa fa-truck" aria-hidden="true"></i> free shipping</span> on todays offer!</p>
+    <p><span>special discount activated:</span> Price savings of over 40% + <span><img src="img/car.png" class="car" alt=""> free shipping</span> on todays offer!</p>
   </div>
 
   <div class="container">
@@ -66,7 +61,7 @@
                 <ul class="bullets_ul">
                   <li class="bullet">Receive a 2 month supply</li>
                   <li class="bullet">Lose up to <span class="weight">6 kg</span></li>
-                  <li class="bullet"><span class="free_shipping"><i class="fa fa-truck" aria-hidden="true"></i> Free shipping</span></li>
+                  <li class="bullet"><span class="free_shipping"><img src="img/car_red.png" class="car" alt=""> Free shipping</span></li>
                 </ul>
                 <div class="price_card_price">
                   <p class="old_price">retail price: <span>C$49.95</span></p>
@@ -92,6 +87,7 @@
 
         <div class="col-md-6 col-lg-4">
           <div id="price_card_2" class="price_card active_price_card">
+            <img src="img/lady_popup.png" class="lady_popup" alt="">
             <div class="most_popular_label"></div>
             <div class="price_card_body_border">
               <div class="price_card_header">
@@ -106,7 +102,7 @@
                 <ul class="bullets_ul">
                   <li class="bullet">Receive a 6 month supply</li>
                   <li class="bullet">Lose up to <span class="weight">18 kg</span></li>
-                  <li class="bullet"><span class="free_shipping"><i class="fa fa-truck" aria-hidden="true"></i> Free shipping</span></li>
+                  <li class="bullet"><span class="free_shipping"><img src="img/car_red.png" class="car" alt=""> Free shipping</span></li>
                 </ul>
                 <div class="price_card_price">
                   <p class="old_price">retail price: <span>C$49.95</span></p>
@@ -145,7 +141,7 @@
                 <ul class="bullets_ul">
                   <li class="bullet">Receive a 4 month supply</li>
                   <li class="bullet">Lose up to <span class="weight">12 kg</span></li>
-                  <li class="bullet"><span class="free_shipping"><i class="fa fa-truck" aria-hidden="true"></i> Free shipping</span></li>
+                  <li class="bullet"><span class="free_shipping"><img src="img/car_red.png" class="car" alt=""> Free shipping</span></li>
                 </ul>
                 <div class="price_card_price">
                   <p class="old_price">retail price: <span>C$49.95</span></p>
@@ -170,12 +166,50 @@
         </div>
 
       </div>
+
+      <div class="row justify-content-end">
+        <a href="#" class="btn btn-primary next_step_btn">go to next step</a>
+      </div>
+
     </section>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-      Launch demo modal
-    </button>
+    <!-- Stories section -->
+    <section class="stories">
+      <h2>real stories. real result</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <iframe width="100%" height="230" src="https://www.youtube.com/embed/FA-iuF_NvF4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe width="100%" height="230" src="https://www.youtube.com/embed/tSdrDXPrwA4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe width="100%" height="230" src="https://www.youtube.com/embed/U_dfYOKN-yU" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex align-items-center logo_and_subt">
+        <img src="img/logo.png" alt="">
+        <p class="footer_logo_subtitle">Garcinia cambogia extract capsules</p>
+      </div>
+      <div class="d-flex align-items-center footer_links">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <p class="footer_warning"><span>Warning</span> The statments made on our websites have not been evaluated by the FDA (U.S. Food & Drug Administration). This product is not intended to diagnose, cure or prevent any disease. The information provided by this website or this
+        companay is not a substitute for a face-to-face consultation with your physician, and should not be construed as indvidial medical advice. The testimonials on this website are individial cases and do not guarantee that you will get the same results.</p>
+      <p class="copyright">Copyright © 2017<br>ООО "МАстреСПА" ИНН 104380285762 ОГРН 427602692592</p>
+      <div class="footer_logos">
+        <img src="img/footer_logo_1.png" class="footer_logo" alt="">
+        <img src="img/footer_logo_2.png" class="footer_logo" alt="">
+        <img src="img/footer_logo_3.png" class="footer_logo" alt="">
+        <img src="img/footer_logo_4.png" class="footer_logo" alt="">
+      </div>
+    </footer>
 
   </div>
 
@@ -186,7 +220,7 @@
         <div class="modal-body">
           <div class="modal_bg_img">
             <div class="row">
-              <div class="col-9">
+              <div class="col-8">
                 <div class="header_skew_logo">
                   <a href="#" class="d-flex justify-content-end align-items-center header_logo_a"><img src="img/logo.png" class="header_logo" alt=""></a>
                 </div>
@@ -195,7 +229,19 @@
                 </div>
                 <img src="img/modal_fruits_and_bottles.png" class="modal_fruits_and_bottles" alt="">
               </div>
-              <img src="img/modal_lady.png" alt="">
+              <div class="col-4">
+                <img src="img/modal_lady.png" class="modal_lady" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="modal_footer">
+            <div class="row">
+              <div class="col-5">
+                <p class="modal_p">2 free bottles!</p>
+              </div>
+              <div class="col-7">
+                <a href="#" class="btn btn-primary modal_btn">apply the coupon</a>
+              </div>
             </div>
           </div>
         </div>
